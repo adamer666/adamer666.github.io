@@ -1,5 +1,5 @@
 /*
-	Striped by HTML5 UP
+	Verti by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
@@ -7,16 +7,14 @@
 (function($) {
 
 	var	$window = $(window),
-		$body = $('body'),
-		$document = $(document);
+		$body = $('body');
 
 	// Breakpoints.
 		breakpoints({
-			desktop:   [ '737px',   null     ],
-			wide:      [ '1201px',  null     ],
-			narrow:    [ '737px',   '1200px' ],
-			narrower:  [ '737px',   '1000px' ],
-			mobile:    [ null,      '736px'  ]
+			xlarge:  [ '1281px',  '1680px' ],
+			large:   [ '981px',   '1280px' ],
+			medium:  [ '737px',   '980px'  ],
+			small:   [ null,      '736px'  ]
 		});
 
 	// Play initial animations on page load.
@@ -26,36 +24,32 @@
 			}, 100);
 		});
 
+	// Dropdowns.
+		$('#nav > ul').dropotron({
+			mode: 'fade',
+			noOpenerFade: true,
+			speed: 300
+		});
+
 	// Nav.
 
-		// Height hack.
-		/*
-			var $sc = $('#sidebar, #content'), tid;
-
-			$window
-				.on('resize', function() {
-					window.clearTimeout(tid);
-					tid = window.setTimeout(function() {
-						$sc.css('min-height', $document.height());
-					}, 100);
-				})
-				.on('load', function() {
-					$window.trigger('resize');
-				})
-				.trigger('resize');
-		*/
-
-		// Title Bar.
+		// Toggle.
 			$(
-				'<div id="titleBar">' +
-					'<a href="#sidebar" class="toggle"></a>' +
-					'<span class="title">' + $('#logo').html() + '</span>' +
+				'<div id="navToggle">' +
+					'<a href="#navPanel" class="toggle"></a>' +
 				'</div>'
 			)
 				.appendTo($body);
 
-		// Sidebar
-			$('#sidebar')
+		// Panel.
+			$(
+				'<div id="navPanel">' +
+					'<nav>' +
+						$('#nav').navList() +
+					'</nav>' +
+				'</div>'
+			)
+				.appendTo($body)
 				.panel({
 					delay: 500,
 					hideOnClick: true,
@@ -64,7 +58,7 @@
 					resetForms: true,
 					side: 'left',
 					target: $body,
-					visibleClass: 'sidebar-visible'
+					visibleClass: 'navPanel-visible'
 				});
 
 })(jQuery);
