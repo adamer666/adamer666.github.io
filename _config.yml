@@ -2,12 +2,12 @@
 #   Main Configs   #
 # ---------------- #
 baseurl:
-url: https://www.sunbufu.club
+# url: https://www.sunbufu.club
 date_format: "ordinal"
-title: 孙不服的博客
+title: 李小凡的博客
 subtitle: "Life is great and everything will be OK."
 description: "孙不服的博客"
-keywords: 孙不服的博客, sunbufu
+keywords: 李小凡的博客, adam
 timezone: Asia/Shanghai
 encoding: "utf-8"
 side_bar_repo_limit: 5
@@ -15,12 +15,12 @@ side_bar_repo_limit: 5
 # ---------------- #
 #      Author      #
 # ---------------- #
-author: sunbufu
-organization: 瓜子
-organization_url: http://www.guazi.com
-github_username: sunbufu
+author: adam
+organization: 快手
+organization_url: http://www.kuaishou.com
+github_username: adam
 location: Beijing, China
-email: sunyoubufu@163.com
+email: 18210681620@139.com
 
 # ---------------- #
 #    Navigation    #
@@ -81,7 +81,7 @@ collections:
     output: true
     permalink: /wiki/:path/
 
-repository: sunbufu/sunbufu.github.io
+repository: adam666/adam666.github.io
 
 # ---------------- #
 #      Comments    #
@@ -102,7 +102,7 @@ comments_provider: gitalk
 #        client_secret: c8f83aea051671a33b02a9581678b75aa59cf2b6
 # https://github.com/gitalk/gitalk#install
 gitalk:
-  owner: sunbufu
+  owner: adam666
   repo: blog-comments
   clientID: 59e22883393cb32a3b96
   clientSecret: bb45d9edf67b30ad811bcabe74ff53ea1f3bb03a
